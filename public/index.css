@@ -1,0 +1,751 @@
+body {
+  background: #2b2626;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #626262;
+  letter-spacing: 0em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: #101631;
+}
+
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: "Poppins";
+  font-size: 13px;
+  width: 100%;
+  height: 60px;
+  color: #101631;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #d8dbe2;
+  appearance: none;
+  resize: none;
+  outline: 0;
+  transition: all 0.3s ease 0s;
+  border-radius: 0px;
+}
+
+.title {
+  text-align: left;
+  margin: 0 0 15px 20px;
+  padding: 0 0 5px 0;
+  position: relative;
+  font-size: 17px;
+  color: #101631;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 20, 61, 0.4) 0%,
+    rgba(59, 63, 82, 0.01) 100%
+  );
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  bottom: -15px;
+  width: 95%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at left,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.line-left {
+  position: relative;
+}
+
+.line-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.line-down {
+  position: relative;
+}
+
+.line-down::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at left,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+header {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header nav a {
+  width: 100%;
+  height: 72px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: color 0.3s ease 0s;
+  font-size: 20px;
+}
+
+header nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+header nav a .link {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+header nav a:hover {
+  color: #6f7797;
+}
+
+main {
+  margin-top: 88px;
+}
+
+main .profile,
+main .about,
+main .resume,
+main .interests,
+main .contact {
+  box-sizing: border-box;
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  z-index: 10;
+  border-radius: 4px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+main .about,
+main .resume,
+main .interests,
+main .contact {
+  padding: 30px 20px 30px 20px;
+  margin-top: 15px;
+}
+
+main .profile {
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+.profile-background {
+  background-image: url("./multimedia/chrispace.png");
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: -2;
+}
+
+.profile-background::after {
+  content: "";
+  position: absolute;
+  right: -12%;
+  bottom: -198px;
+  width: 700px;
+  height: 200px;
+  background: #ffffff;
+  transform: rotate(12deg);
+  z-index: -1;
+}
+
+.profile-background::before {
+  content: "";
+  position: absolute;
+  left: -12%;
+  bottom: -198px;
+  width: 700px;
+  height: 200px;
+  background: #ffffff;
+  transform: rotate(348deg);
+  z-index: -1;
+}
+
+.profile-image {
+  position: relative;
+  height: 84px;
+}
+
+.profile-image img {
+  position: relative;
+  top: -82px;
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 134px;
+}
+
+.profile-image::before {
+  content: "";
+  position: absolute;
+  top: -69px;
+  left: calc(50% - 78px);
+  width: 134px;
+  height: 134px;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 37, 43, 0.4) 0%,
+    rgba(51, 50, 66, 0.01) 100%
+  );
+  border-radius: 100%;
+}
+
+.profile-name {
+  font-size: 32px;
+  color: #171717;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0 auto 0 auto;
+}
+
+.profile-profession {
+  font-size: 14px;
+  color: #101631;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.profile-social a {
+  transition: color 0.3s ease 0s;
+  margin: 0 6px;
+  font-size: 16px;
+}
+
+.profile-social a:hover {
+  text-decoration: none;
+  color: #6f7797;
+}
+
+.profile-buttons {
+  position: relative;
+  display: flex;
+  margin-top: 58px;
+}
+
+.profile-buttons::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at left,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.profile-buttons a {
+  position: relative;
+  width: 50%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  line-height: 70px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #101631;
+}
+
+.profile-buttons a:hover {
+  color: #6f7797;
+}
+
+.profile-buttons a:first-child::before,
+.profile-buttons a:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.profile-buttons a i {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.about-aboutMe > div {
+  padding: 5px 17px;
+  position: relative;
+}
+
+.about-aboutMe > div > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-aboutMe > div > div > div {
+  width: 50%;
+  text-align: left;
+}
+
+.about-aboutMe > div > div > div span {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.about-aboutMe p {
+  text-align: left;
+}
+
+.resume-lines {
+  display: flex;
+}
+
+.resume-line h4 {
+  margin: 0;
+  text-align: left;
+  padding: 20px 18px;
+  font-size: 13px;
+  line-height: 13px;
+  color: #101631;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.resume-line h4 .fas {
+  position: relative;
+  float: left;
+  top: -7px;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  color: #101631;
+}
+
+.resume-line {
+  flex: 1;
+  text-align: left;
+}
+
+.resume-line article {
+  padding: 15px 15px;
+}
+
+.resume-line .date {
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 18px;
+  color: #d8dbe2;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.resume-line .date::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  background: #d8dbe2;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -khtml-border-radius: 9px;
+}
+
+.resume-line .date.active {
+  color: #101631;
+}
+
+.resume-line .date.active::before {
+  background: #101631;
+}
+
+.resume-line .name {
+  margin: 0;
+  font-size: 13px;
+  color: #101631;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.resume-line .company {
+  margin: 0 0 10px 0;
+  font-size: 11px;
+  color: #999999;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.resume-skills {
+  margin-top: 50px;
+}
+
+.resume-skills > div {
+  display: flex;
+}
+
+.resume-skills > div section {
+  flex: 1;
+  text-align: left;
+}
+
+.resume-skills > div section > div {
+  padding: 18px 20px;
+}
+
+.resume-skills > div section > div > div:first-child {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: #626262;
+  text-align: left;
+}
+
+.resume-skills > div section > div > div:last-child {
+  width: 100%;
+  background: #d8dbe2;
+  height: 4px;
+}
+
+.resume-skills > div section > div > div > div {
+  background: #101631;
+  height: 4px;
+}
+
+.resume-skills h4 {
+  margin: 0;
+  text-align: left;
+  padding: 20px 18px;
+  font-size: 13px;
+  line-height: 13px;
+  color: #101631;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.resume-skills h4 .fas {
+  position: relative;
+  float: left;
+  top: -7px;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  color: #101631;
+}
+
+.interests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interests-header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 17px;
+}
+
+.interests-header h3::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  bottom: -27px;
+  width: 400%;
+  height: 1px;
+  background: radial-gradient(
+    ellipse at left,
+    rgba(197, 202, 213, 0.7) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.interests-header ul li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.interests-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interests-content > div {
+  width: 50%;
+}
+
+.interests-content > div > div {
+  padding: 18px;
+}
+
+.interests-content > div > div h4 {
+  padding: 0 0 2px 0;
+  display: block;
+  font-size: 13px;
+  color: #171717;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 126px;
+  margin: 0 auto;
+}
+
+.interests-content > div > div h5 {
+  margin: 0;
+  font-size: 11px;
+  color: #999999;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.interests-content img {
+  width: 100%;
+}
+
+main .contact {
+  margin-bottom: 40px;
+}
+
+.contact-information {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 11px 18px;
+}
+
+.contact-information > div {
+  width: 50%;
+  text-align: left;
+}
+
+.contact-information > div span {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.contact-form {
+  margin-top: 50px;
+}
+
+.contact-form form {
+  padding: 20px 20px;
+}
+
+.contact-form .double-line {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-form .double-line > div {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.contact-form .double-line input {
+  width: 100%;
+}
+
+.contact-form button {
+  border: none;
+  width: auto;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  color: #6f7797;
+}
+
+main .interests .interests-content .line-left {
+    width: 100%;
+  }
+
+  main .interests .interests-content .line-down {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+@media only screen and (min-width: 540px) {
+  header {
+    left: calc(50% - 270px);
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .selected {
+    color: #3e4564;
+  }
+
+  .cv-head {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    max-width: 80px;
+    position: relative;
+    border-radius: 5px;
+    left: -6px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(
+      ellipse at left,
+      rgba(197, 202, 213, 0.7) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+
+  main {
+    display: flex;
+    margin: 0;
+    width: 1020px;
+    height: 100%;
+    align-items: center;
+  }
+
+  main .about,
+  main .resume,
+  main .interests,
+  main .contact {
+    opacity: 0;
+    overflow: hidden;
+    height: 574px;
+    width: 540px;
+    top: 50%;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translate(-450px, -50%);
+    z-index: 0;
+    margin: 0;
+    position: absolute;
+  }
+
+  main .profile {
+    width: 480px;
+    height: 600px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    margin: 0;
+  }
+
+  main .view {
+    padding: 30px 20px 30px 20px;
+    overflow: auto;
+    opacity: 1;
+    transform: translate(-8px, -50%);
+  }
+
+  main .wrapper {
+    height: 100%;
+  }
+
+  main .view::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  main .view::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  main .view::-webkit-scrollbar-thumb {
+    background: #666;
+  }
+
+  main .contact {
+    margin-bottom: 0;
+  }
+}
