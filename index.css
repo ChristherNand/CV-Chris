@@ -635,13 +635,13 @@ main .contact {
 }
 
 main .interests .interests-content .line-left {
-    width: 100%;
-  }
+  width: 100%;
+}
 
-  main .interests .interests-content .line-down {
-    width: 50%;
-    margin: 0 auto;
-  }
+main .interests .interests-content .line-down {
+  width: 50%;
+  margin: 0 auto;
+}
 
 @media only screen and (min-width: 540px) {
   header {
@@ -749,3 +749,10 @@ main .interests .interests-content .line-left {
     margin-bottom: 0;
   }
 }
+
+/* Experience section */
+
+.experience {
+  text-align: justify;
+}
+
